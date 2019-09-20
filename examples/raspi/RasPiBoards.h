@@ -14,6 +14,34 @@
 #define RF_IRQ_PIN RPI_V2_GPIO_P1_22 // IRQ on GPIO25 so P1 connector pin #22
 #define RF_RST_PIN RPI_V2_GPIO_P1_15 // IRQ on GPIO22 so P1 connector pin #15
 
+#elif defined (BOARD_HOME)
+#define RF_LED_PIN RPI_V2_GPIO_P1_16 // Led on GPIO23 so P1 connector pin #16
+#define RF_CS_PIN  RPI_V2_GPIO_P1_24 // Slave Select on CE0 so P1 connector pin #24
+#define RF_IRQ_PIN RPI_V2_GPIO_P1_22 // IRQ on GPIO25 so P1 connector pin #22
+#define RF_RST_PIN RPI_V2_GPIO_P1_15 // IRQ on GPIO22 so P1 connector pin #15
+
+#elif defined (CSRD_SERVER)
+
+//
+// change to fit your needs
+
+// Module 1 on board RFM95 868 MHz (example)
+#define CSRD1_LED_PIN RPI_V2_GPIO_P1_07 // Led on GPIO4 so P1 connector pin #7
+#define CSRD1_CS_PIN  RPI_V2_GPIO_P1_24 // Slave Select on CE0 so P1 connector pin #24
+#define CSRD1_IRQ_PIN RPI_V2_GPIO_P1_22 // IRQ on GPIO25 so P1 connector pin #22
+#define CSRD1_RST_PIN RPI_V2_GPIO_P1_29 // Reset on GPIO5 so P1 connector pin #29
+
+// Module 2 on board RFM95 433 MHz (example)
+#define CSRD2_LED_PIN RPI_V2_GPIO_P1_11 // Led on GPIO17 so P1 connector pin #11
+#define CSRD2_CS_PIN  RPI_V2_GPIO_P1_26 // Slave Select on CE1 so P1 connector pin #26
+#define CSRD2_IRQ_PIN RPI_V2_GPIO_P1_36 // IRQ on GPIO16 so P1 connector pin #36
+#define CSRD2_RST_PIN RPI_V2_GPIO_P1_31 // Reset on GPIO6 so P1 connector pin #31
+
+// Module 3 on board RFM69HW (example)
+#define CSRD3_LED_PIN RPI_V2_GPIO_P1_35 // Led on GPIO19 so P1 connector pin #11
+#define CSRD3_CS_PIN  RPI_V2_GPIO_P1_37 // Slave Select on GPIO26  so P1 connector pin #37
+#define CSRD3_IRQ_PIN RPI_V2_GPIO_P1_16 // IRQ on GPIO23 so P1 connector pin #16
+#define CSRD3_RST_PIN RPI_V2_GPIO_P1_33 // reset on GPIO13 so P1 connector pin #33
 
 // Raspberri PI Lora Gateway Board iC880A and LinkLab Lora Gateway Shield (if RF module plugged into)
 // ==================================================================================================
